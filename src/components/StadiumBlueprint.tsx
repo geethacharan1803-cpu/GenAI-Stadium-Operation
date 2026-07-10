@@ -135,7 +135,7 @@ export default function StadiumBlueprint({ stadiumId, onSectionClick }: StadiumB
               <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
                 <span style={{ color: 'var(--color-text-secondary)' }}>Accessibility:</span>{' '}
                 {selectedSection.accessibility ? (
-                  <Accessibility size={16} style={{ color: 'var(--color-teal)' }} title="Wheelchair accessible" />
+                  <Accessibility size={16} style={{ color: 'var(--color-teal)' }} />
                 ) : (
                   <span style={{ fontSize: '0.75rem', color: 'var(--color-text-tertiary)' }}>Stairs only</span>
                 )}

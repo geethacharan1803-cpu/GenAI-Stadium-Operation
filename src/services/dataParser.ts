@@ -102,7 +102,7 @@ async function parsePDF(file: File): Promise<ParsedData> {
     const page = await pdf.getPage(i);
     const textContent = await page.getTextContent();
     const pageText = textContent.items
-      .map((item: { str?: string }) => ('str' in item ? item.str : ''))
+      .map((item: any) => (item.str || ''))
       .join(' ');
     textLines.push(pageText);
   }

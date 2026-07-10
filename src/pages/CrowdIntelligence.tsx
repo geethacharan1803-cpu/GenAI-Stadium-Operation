@@ -191,7 +191,7 @@ export default function CrowdIntelligence() {
                     borderRadius: 8,
                     fontSize: '0.75rem',
                   }}
-                  formatter={(value: number) => [`${value}%`, 'Occupancy']}
+                  formatter={(value: any) => [`${value}%`, 'Occupancy']}
                 />
                 <Bar
                   dataKey="pct"
