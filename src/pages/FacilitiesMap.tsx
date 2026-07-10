@@ -127,7 +127,7 @@ export default function FacilitiesMap() {
       <div className="grid-2-1">
         {/* Leaflet Map Card */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-md)' }}>
-          <div className="glass-card no-hover" style={{ padding: '8px', height: '450px', position: 'relative', overflow: 'hidden' }}>
+          <div className="glass-card no-hover" role="application" aria-label="Interactive Facilities Map" style={{ padding: '8px', height: '450px', position: 'relative', overflow: 'hidden' }}>
             <MapContainer
               center={stadiumCenter}
               zoom={13}

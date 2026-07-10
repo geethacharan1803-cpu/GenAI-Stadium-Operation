@@ -13,7 +13,15 @@ export default function AIReasoningCard({ title, content, isLoading = false, tag
 
   // Simple markdown-to-HTML conversion
   const renderContent = (text: string) => {
-    return text
+    // Escape HTML tags to prevent XSS
+    const escapedText = text
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+
+    return escapedText
       .split('\n')
       .map((line, i) => {
         // Bold

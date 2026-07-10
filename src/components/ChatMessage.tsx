@@ -9,8 +9,16 @@ export default function ChatMessage({ message }: ChatMessageProps) {
   const isUser = message.role === 'user';
 
   const renderContent = (text: string) => {
+    // Escape HTML tags to prevent XSS
+    const escapedText = text
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+
     // Simple markdown rendering
-    const html = text
+    const html = escapedText
       .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
       .replace(/\*(.*?)\*/g, '<em>$1</em>')
       .replace(/`(.*?)`/g, '<code>$1</code>')

@@ -48,7 +48,7 @@ export default function StadiumBlueprint({ stadiumId, onSectionClick }: StadiumB
       {/* Blueprint SVG */}
       <div className="glass-card no-hover" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
         <div className="glass-card-title" style={{ width: '100%', marginBottom: '12px' }}>Stadium Layout Blueprint</div>
-        <svg viewBox="0 0 400 400" style={{ width: '100%', maxHeight: '300px' }}>
+        <svg role="img" aria-label="Interactive Stadium Seating Blueprint" viewBox="0 0 400 400" style={{ width: '100%', maxHeight: '300px' }}>
           <defs>
             <radialGradient id="fieldGrad" cx="50%" cy="50%" r="50%">
               <stop offset="0%" stopColor="#2a6f2a" />
