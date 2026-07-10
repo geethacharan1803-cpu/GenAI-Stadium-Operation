@@ -3,8 +3,8 @@
 // ============================================================
 
 import { describe, it, expect } from 'vitest';
-import { generateCrowdSnapshot } from './CrowdSimulator';
-import { getDefaultStadium } from '../utils/stadiumData';
+import { generateCrowdSnapshot } from '../src/context/CrowdSimulator';
+import { getDefaultStadium } from '../src/utils/stadiumData';
 
 describe('Crowd Simulation Engine', () => {
   it('should generate a valid crowd snapshot bounds', () => {

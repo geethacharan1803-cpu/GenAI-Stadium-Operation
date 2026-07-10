@@ -3,7 +3,7 @@
 // ============================================================
 
 import { describe, it, expect } from 'vitest';
-import { getStadiumById, getDefaultStadium, FIFA_2026_STADIUMS } from './stadiumData';
+import { getStadiumById, getDefaultStadium, FIFA_2026_STADIUMS } from '../src/utils/stadiumData';
 
 describe('Stadium Data Configuration', () => {
   it('should load default stadium', () => {
@@ -21,7 +21,7 @@ describe('Stadium Data Configuration', () => {
     expect(invalid).toBeUndefined();
   });
 
-  it('should verify all 16 stadiums contain coordinates', () => {
+  it('should verify all stadiums contain coordinates', () => {
     FIFA_2026_STADIUMS.forEach(stadium => {
       expect(stadium.latitude).toBeGreaterThan(-90);
       expect(stadium.latitude).toBeLessThan(90);

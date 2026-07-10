@@ -3,7 +3,7 @@
 // ============================================================
 
 import { describe, it, expect } from 'vitest';
-import { getLanguageForStadium } from './index';
+import { getLanguageForStadium } from '../src/i18n';
 
 describe('i18n Language Selector', () => {
   it('should auto-detect language based on stadium country', () => {
